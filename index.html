@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هل معلوماتي بأمان؟</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+        /* التصميم العام */
+        body {
+            font-family: "Cairo", serif;
+            background-color: #e0e5ec;
+            color: #1d1d1f;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #e0e5ec;
+            border-radius: 20px;
+            box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5);
+            padding: 40px;
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #1d1d1f;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #1d1d1f;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #6e6e73;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #e0e5ec;
+            color: #1d1d1f;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+            box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.6), -4px -4px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        button:hover {
+            box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.6), inset -4px -4px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .info-item {
+            background-color: #e0e5ec;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: right;
+            line-height: 1.4;
+            box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.6), -4px -4px 8px rgba(255, 255, 255, 0.5);
+        }
+
+        .info-item strong {
+            font-size: 1.2rem;
+            direction: rtl;
+            color: #1d1d1f;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .info-item span {
+            color: #6e6e73;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .info-item .risk-level1 {
+            font-weight: bold;
+            color: green;
+            
+            font-size: 1rem;
+        }
+        .info-item .risk-level2 {
+            font-weight: bold;
+            color: #d9534f;
+            font-size: 1rem;
+            
+
+        }
+        .info-item .risk-level3 {
+            font-weight: bold;
+            color: red;
+            font-size: 1rem;
+            
+        }
+
+        .warning {
+            color: #d9534f;
+            font-weight: bold;
+            margin-top:  8px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* تصميم متجاوب */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            button {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+        hr{
+          margin-top:  4rem;
+        }
+        .rslt{
+          font-size: 1.4rem;
+        }
+        .deviceInfo{
+          direction: ltr;
+          text-align: left;
+        }
+        .intro{
+          font-size: 1.2rem;
+          direction: rtl;
+          line-height: 1.7;
+          text-align: center;
+        }
+        .intro_div{
+         border: 1px dashed #444;
+         padding: 0.5rem 1.2rem;
+         border-radius: 10px;
+         margin: 0 0 1rem;
+        }
+        .logo{
+          font-size: 2.8rem;
+          font-family: "Langar", serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="logo">DEVO_63 scan</h1>
+        <div class="intro_div">
+        <p class="intro">
+بسم الله الرحمن الرحيم، والحمد لله رب العالمين، والصلاة والسلام على خاتم الأنبياء و المرسلين، أما بعد:
+<br>
+
+في الآونة الأخيرة، لاحظت انتشارًا واسعًا ومقلقًا لعمليات اختراق الأجهزة والحسابات وغيرها، والتي غالبًا ما تكون ناتجة عن مواقع إلكترونية. 
+<br>
+
+لذا، قررت أن أبدأ هذا المشروع الذي يقوم بفحص شامل لاكتشاف أي بيانات خاصة بك قد تكون ظاهرة لمالكي المواقع بشكل غير مقصود. بالإضافة إلى ذلك، سيقدم المشروع حلولًا نهائية لأي ثغرات أمنية قد تكون موجودة لديك، إلى جانب بعض النصائح التوعوية المهمة.
+<br>
+<strong>مع التأكيد على أنه لا يتم تخزين أو مشاركة أي معلومات خاصة بك.</strong>
+        </p>
+        </div>
+        <button onclick="startScan()">موافق، ابدأ الفحص</button>
+    </div>
+
+    <div class="container hidden" id="scanResults">
+        <h2>نتائج الفحص</h2>
+        <div class="deviceInfo" id="deviceInfo"></div>
+        <div class="info-item">
+            <strong>الكاميرا والميكروفون:</strong>
+            <span id="cameraMicStatus">جارٍ التحقق...</span>
+            <button onclick="checkCameraMicPermissions()">تحقق من الإذونات</button>
+            <span id="cameraMicWarning" class="warning hidden">قم بمنع إعطاء الإذونات للكاميرا والميكروفون إذا لم تكن بحاجة إليها.</span>
+        </div>
+        <div class="info-item">
+            <strong>الصوت:</strong>
+            <span id="audioStatus">جارٍ التحقق...</span>
+            <button onclick="checkAudioPermission()">تحقق من إذن الصوت</button>
+            <span id="audioWarning" class="warning hidden">قم بمنع إعطاء الإذونات للصوت إذا لم تكن بحاجة إليها.</span>
+        </div>
+        <div class="info-item">
+            <strong>الموقع الجغرافي:</strong>
+            <span id="locationStatus">جارٍ التحقق...</span>
+            <button onclick="checkLocationPermission()">تحقق من إذن الموقع</button>
+            <span id="locationWarning" class="warning hidden">قم بمنع إعطاء الإذونات للموقع إذا لم تكن بحاجة إليها.</span>
+        </div>
+        <div class="info-item">
+            <strong>الإشعارات:</strong>
+            <span id="notificationStatus">جارٍ التحقق...</span>
+            <button onclick="checkNotificationPermission()">تحقق من إذن الإشعارات</button>
+            <span id="notificationWarning" class="warning hidden">قم بمنع إعطاء الإذونات للإشعارات إذا لم تكن بحاجة إليها.</span>
+        </div>
+        <div class="info-item">
+            <strong>التخزين المحلي:</strong>
+            <span id="localStorageStatus">جارٍ التحقق...</span>
+            <button onclick="checkLocalStorage()">تحقق من التخزين المحلي</button>
+            <span id="localStorageWarning" class="warning hidden">قم بمسح التخزين المحلي بانتظام لحماية خصوصيتك.</span>
+        </div>
+        <div class="info-item">
+            <strong>الكوكيز:</strong>
+            <span id="cookieStatus">جارٍ التحقق...</span>
+            <button onclick="checkCookies()">تحقق من الكوكيز</button>
+            <span id="cookieWarning" class="warning hidden">قم بمسح الكوكيز بانتظام لحماية خصوصيتك.</span>
+        </div>
+    </div>
+
+    <script>
+        const apiKey = 'b80dd7723dbc9b'; // استبدل بمفتاح API الخاص بك
+
+        // دالة لبدء الفحص
+        function startScan() {
+            document.querySelector('.container').classList.add('hidden');
+            document.getElementById('scanResults').classList.remove('hidden');
+            fetchDeviceInfo();
+        }
+
+        // دالة لجلب معلومات الجهاز
+        async function fetchDeviceInfo() {
+            const deviceInfo = {
+                userAgent: navigator.userAgent, // معلومات المتصفح ونظام التشغيل
+                language: navigator.language, // اللغة المفضلة
+                platform: navigator.platform, // نظام التشغيل
+                cookieEnabled: navigator.cookieEnabled, // هل الكوكيز مفعلة؟
+                cores: navigator.hardwareConcurrency, // عدد النوى
+                memory: navigator.deviceMemory, // ذاكرة الجهاز (بالغيغابايت)
+                screenResolution: `${window.screen.width}x${window.screen.height}`, // دقة الشاشة
+                pixelRatio: window.devicePixelRatio, // نسبة البكسل
+                isOnline: navigator.onLine, // هل الجهاز متصل بالإنترنت؟
+                isDarkMode: window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches, // الوضع الليلي
+                plugins: Array.from(navigator.plugins).map(plugin => plugin.name), // الإضافات المثبتة
+                batteryLevel: 'غير مدعوم', // نسبة شحن البطارية
+                canDownloadFiles: 'نعم', // هل يمكن تحميل الملفات دون علمك؟
+                canRecordAudio: 'نعم', // هل يمكن تسجيل الصوت؟
+                ipAddress: 'جارٍ التحميل...', // عنوان IP
+            };
+
+            // جلب معلومات البطارية إذا كانت مدعومة
+            if ('getBattery' in navigator) {
+                const battery = await navigator.getBattery();
+                deviceInfo.batteryLevel = `${Math.round(battery.level * 100)}%`;
+            }
+
+            // جلب عنوان IP
+            try {
+                const response = await fetch(`https://ipinfo.io/json?token=${apiKey}`);
+                const data = await response.json();
+                deviceInfo.ipAddress = data.ip;
+            } catch (error) {
+                console.error('Error fetching IP:', error);
+                deviceInfo.ipAddress = 'فشل في جلب العنوان';
+            }
+
+            // التحقق من إمكانية تحميل الملفات
+            deviceInfo.canDownloadFiles = 'نعم'; // المتصفحات الحديثة تسمح بذلك
+
+            // التحقق من إمكانية تسجيل الصوت
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                deviceInfo.canRecordAudio = 'نعم (يتطلب إذنًا)';
+            } else {
+                deviceInfo.canRecordAudio = 'لا';
+            }
+
+            displayDeviceInfo(deviceInfo);
+        }
+
+        // دالة لعرض معلومات الجهاز
+        function displayDeviceInfo(deviceInfo) {
+            const deviceInfoDiv = document.getElementById('deviceInfo');
+            deviceInfoDiv.innerHTML = `
+                <div class="info-item">
+                    <strong>المتصفح ونظام التشغيل:</strong>
+                    <span class="rslt">${deviceInfo.userAgent}</span>
+                     <hr><span class="risk-level2">مستوى الخطورة: متوسط</span>
+                    <span>يمكن استخدام هذه المعلومات لتحديد جهازك.</span>
+                </div>
+                <div class="info-item">
+                    <strong>اللغة المفضلة:</strong>
+                    <span class="rslt">${deviceInfo.language}</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>نظام التشغيل:</strong>
+                    <span class="rslt">${deviceInfo.platform}</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>الكوكيز مفعلة:</strong>
+                    <span class="rslt">${deviceInfo.cookieEnabled ? 'نعم' : 'لا'}</span>
+                     <hr><span class="risk-level">مستوى الخطورة: ${deviceInfo.cookieEnabled ? 'مرتفع' : 'منخفض'}</span>
+                    <span class="rslt">${deviceInfo.cookieEnabled ? 'تمكين الكوكيز قد يعرض معلوماتك للخطر.' : 'الكوكيز غير مفعلة، وهذا جيد.'}</span>
+                </div>
+                <div class="info-item">
+                    <strong>عدد النوى:</strong>
+                    <span class="rslt">${deviceInfo.cores}</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>ذاكرة الجهاز:</strong>
+                    <span class="rslt">${deviceInfo.memory} GB</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>دقة الشاشة:</strong>
+                    <span class="rslt">${deviceInfo.screenResolution}</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>نسبة البكسل:</strong>
+                    <span class="rslt">${deviceInfo.pixelRatio}</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>حالة الاتصال بالإنترنت:</strong>
+                    <span class="rslt">${deviceInfo.isOnline ? 'متصل' : 'غير متصل'}</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>الوضع الليلي:</strong>
+                    <span class="rslt">${deviceInfo.isDarkMode ? 'مفعل' : 'غير مفعل'}</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>الإضافات المثبتة:</strong>
+                    <span class="rslt">${deviceInfo.plugins.join(', ')}</span>
+                     <hr><span class="risk-level2">مستوى الخطورة: متوسط</span>
+                    <span>بعض الإضافات قد تشكل خطرًا على الخصوصية.</span>
+                </div>
+                <div class="info-item">
+                    <strong>نسبة شحن البطارية:</strong>
+                    <span class="rslt">${deviceInfo.batteryLevel}</span>
+                     <hr><span class="risk-level1">مستوى الخطورة: منخفض</span>
+                    <span>هذه المعلومة غير حساسة.</span>
+                </div>
+                <div class="info-item">
+                    <strong>عنوان IP:</strong>
+                    <span class="rslt">${deviceInfo.ipAddress}</span>
+                     <hr><span class="risk-level3">مستوى الخطورة: مرتفع</span>
+                    <span>عنوان IP يمكن استخدامه لتحديد موقعك الجغرافي.</span>
+                </div>
+                <div class="info-item">
+                    <strong>هل يمكن تحميل الملفات دون علمك؟</strong>
+                    <span class="rslt">${deviceInfo.canDownloadFiles}</span>
+                     <hr><span class="risk-level3">مستوى الخطورة: مرتفع</span>
+                    <span>يمكن للمواقع تحميل الملفات دون علمك إذا لم تكن حذرًا.</span>
+                </div>
+                <div class="info-item">
+                    <strong>هل يمكن تسجيل الصوت؟</strong>
+                    <span class="rslt">${deviceInfo.canRecordAudio}</span>
+                     <hr><span class="risk-level3">مستوى الخطورة: مرتفع</span>
+                    <span>يمكن للمواقع تسجيل الصوت إذا منحت الإذن.</span>
+                </div>
+            `;
+        }
+
+        // دالة للتحقق من إذن الكاميرا والميكروفون
+        async function checkCameraMicPermissions() {
+            const statusElement = document.getElementById('cameraMicStatus');
+            const warningElement = document.getElementById('cameraMicWarning');
+
+            try {
+                const cameraPermission = await navigator.permissions.query({ name: 'camera' });
+                const micPermission = await navigator.permissions.query({ name: 'microphone' });
+
+                if (cameraPermission.state === 'granted' || micPermission.state === 'granted') {
+                    statusElement.textContent = 'الإذن مسموح للكاميرا و/أو الميكروفون.';
+                    warningElement.classList.remove('hidden');
+                } else {
+                    statusElement.textContent = 'الإذن غير مسموح للكاميرا والميكروفون.';
+                    warningElement.classList.add('hidden');
+                }
+            } catch (error) {
+                console.error('Error checking permissions:', error);
+                statusElement.textContent = 'فشل في التحقق من الإذونات.';
+                warningElement.classList.add('hidden');
+            }
+        }
+
+        // دالة للتحقق من إذن الصوت
+        async function checkAudioPermission() {
+            const statusElement = document.getElementById('audioStatus');
+            const warningElement = document.getElementById('audioWarning');
+
+            try {
+                const micPermission = await navigator.permissions.query({ name: 'microphone' });
+
+                if (micPermission.state === 'granted') {
+                    statusElement.textContent = 'الإذن مسموح للصوت.';
+                    warningElement.classList.remove('hidden');
+                } else {
+                    statusElement.textContent = 'الإذن غير مسموح للصوت.';
+                    warningElement.classList.add('hidden');
+                }
+            } catch (error) {
+                console.error('Error checking audio permission:', error);
+                statusElement.textContent = 'فشل في التحقق من إذن الصوت.';
+                warningElement.classList.add('hidden');
+            }
+        }
+
+        // دالة للتحقق من إذن الموقع
+        async function checkLocationPermission() {
+            const statusElement = document.getElementById('locationStatus');
+            const warningElement = document.getElementById('locationWarning');
+
+            try {
+                const locationPermission = await navigator.permissions.query({ name: 'geolocation' });
+
+                if (locationPermission.state === 'granted') {
+                    statusElement.textContent = 'الإذن مسموح للموقع.';
+                    warningElement.classList.remove('hidden');
+                } else {
+                    statusElement.textContent = 'الإذن غير مسموح للموقع.';
+                    warningElement.classList.add('hidden');
+                }
+            } catch (error) {
+                console.error('Error checking location permission:', error);
+                statusElement.textContent = 'فشل في التحقق من إذن الموقع.';
+                warningElement.classList.add('hidden');
+            }
+        }
+
+        // دالة للتحقق من إذن الإشعارات
+        async function checkNotificationPermission() {
+            const statusElement = document.getElementById('notificationStatus');
+            const warningElement = document.getElementById('notificationWarning');
+
+            try {
+                const notificationPermission = await navigator.permissions.query({ name: 'notifications' });
+
+                if (notificationPermission.state === 'granted') {
+                    statusElement.textContent = 'الإذن مسموح للإشعارات.';
+                    warningElement.classList.remove('hidden');
+                } else {
+                    statusElement.textContent = 'الإذن غير مسموح للإشعارات.';
+                    warningElement.classList.add('hidden');
+                }
+            } catch (error) {
+                console.error('Error checking notification permission:', error);
+                statusElement.textContent = 'فشل في التحقق من إذن الإشعارات.';
+                warningElement.classList.add('hidden');
+            }
+        }
+
+        // دالة للتحقق من التخزين المحلي
+        function checkLocalStorage() {
+            const statusElement = document.getElementById('localStorageStatus');
+            const warningElement = document.getElementById('localStorageWarning');
+
+            if (localStorage.length > 0) {
+                statusElement.textContent = 'يوجد بيانات في التخزين المحلي.';
+                warningElement.classList.remove('hidden');
+            } else {
+                statusElement.textContent = 'لا يوجد بيانات في التخزين المحلي.';
+                warningElement.classList.add('hidden');
+            }
+        }
+
+        // دالة للتحقق من الكوكيز
+        function checkCookies() {
+            const statusElement = document.getElementById('cookieStatus');
+            const warningElement = document.getElementById('cookieWarning');
+
+            if (document.cookie.length > 0) {
+                statusElement.textContent = 'يوجد كوكيز مخزنة.';
+                warningElement.classList.remove('hidden');
+            } else {
+                statusElement.textContent = 'لا يوجد كوكيز مخزنة.';
+                warningElement.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

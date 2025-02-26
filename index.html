@@ -90,20 +90,149 @@
             </div>
         </div>
 
-        <!-- إذن الكاميرا والميكروفون -->
+
+        <!-- اختبار التصيد الاحتيالي -->
+
+        <!-- اختبار Clipboard Hijacking -->
         <div class="test-card">
-            <div class="info"> 
-            <div class="header">
-                <h3>إذن الكاميرا والميكروفون 📸</h3>
-                </div>
-                <p class="status" id="cameraMicStatus">لم يتم الفحص بعد</p>
-            <button class="button"  onclick="checkCameraMicPermissions()">ادغط للفحص</button>
-                <hr><div class="note">
-                    🔹 غطِّ كاميرا اللاب توب عند عدم استخدامها.<br>
-                    🔹 قم بتعطيل **إذن الكاميرا والميكروفون** للمواقع غير الموثوقة.
+            <div class="info">
+                <div class="header"><h3>📜 اختبار سرقة الحافظة (Clipboard)</h3></div>
+                <p class="status" id="clipboardTest">لم يتم الفحص بعد</p>
+                <button class="button" onclick="testClipboard()">اضغط للفحص</button>
+                <hr>
+                <div class="note">
+                    ✅ لا تنسخ بيانات حساسة أثناء تصفح المواقع المشبوهة<br>
+                    ✅ استخدم إضافات تمنع المواقع من قراءة الحافظة
                 </div>
             </div>
         </div>
+
+        <!-- اختبار WebRTC -->
+        <div class="test-card">
+            <div class="info">
+                <div class="header"><h3>🔍 اختبار كشف عنوان IP عبر WebRTC</h3></div>
+                <p class="status" id="webrtcTest">لم يتم الفحص بعد</p>
+                <button class="button" onclick="testWebRTC()">اضغط للفحص</button>
+                <hr>
+                <div class="note">
+                    ✅ استخدم VPN لحماية عنوان IP الحقيقي<br>
+                    ✅ عطّل WebRTC في إعدادات متصفحك
+                </div>
+            </div>
+        </div>
+
+        <!-- اختبار Canvas Fingerprinting -->
+        <div class="test-card">
+            <div class="info">
+                <div class="header"><h3>🖼️ اختبار تعقبك عبر Canvas</h3></div>
+                <p class="status" id="canvasTest">لم يتم الفحص بعد</p>
+                <button class="button" onclick="testCanvasFingerprinting()">اضغط للفحص</button>
+                <hr>
+                <div class="note">
+                    ✅ استخدم متصفحات تحمي من التعقب مثل Brave<br>
+                    ✅ قم بتثبيت إضافات منع التتبع
+                </div>
+            </div>
+        </div>
+
+        <!-- اختبار الوصول إلى الكاميرا والميكروفون -->
+        <div class="test-card">
+            <div class="info">
+                <div class="header"><h3>📷 اختبار وصول المواقع للكاميرا والميكروفون</h3></div>
+                <p class="status" id="cameraTest">لم يتم الفحص بعد</p>
+                <button class="button" onclick="testCameraAccess()">اضغط للفحص</button>
+                <hr>
+                <div class="note">
+                    ✅ لا تمنح الإذن إلا للمواقع الموثوقة<br>
+                    ✅ راجع الأذونات في إعدادات المتصفح باستمرار
+                </div>
+            </div>
+        </div>
+<!-- اختبار قراءة الكوكيز -->
+<div class="test-card">
+    <div class="info">
+        <div class="header"><h3>🍪 اختبار قراءة الكوكيز</h3></div>
+        <p class="status" id="cookiesTest">لم يتم الفحص بعد</p>
+        <button class="button" onclick="testCookies()">اضغط للفحص</button>
+        <hr>
+        <div class="note">
+            ✅ استخدم وضع التصفح الخفي لحماية بياناتك<br>
+            ✅ قم بمسح الكوكيز من وقت لآخر لمنع تتبعك
+        </div>
+    </div>
+</div>        
+        
+        <div class="test-card">
+    <div class="info">
+        <div class="header"><h3>🕵️‍♂️ اختبار تسريب WebRTC</h3></div>
+        <p class="status" id="webrtcTest">لم يتم الفحص بعد</p>
+        <button class="button" onclick="testWebRTC()">اختبار</button>
+        <hr>
+        <div class="note">
+            🔹 لتعطيل WebRTC، استخدم إضافة مثل **uBlock Origin**<br>
+            🔹 في **Firefox**: اكتب `about:config` وابحث عن `media.peerconnection.enabled` ثم اجعله **false**.
+        </div>
+    </div>
+</div>
+
+<div class="test-card">
+    <div class="info">
+        <div class="header"><h3>🔍 اختبار تجسس سجل التصفح</h3></div>
+        <p class="status" id="historyTest">لم يتم الفحص بعد</p>
+        <button class="button" onclick="testHistorySniffing()">اختبار</button>
+        <hr>
+        <div class="note">
+            🔹 استخدم متصفحًا يمنع هذه الثغرة مثل **Firefox**.<br>
+            🔹 قم بمسح سجل التصفح بشكل دوري.
+        </div>
+    </div>
+</div>
+<!-- 📝 اختبار الملء التلقائي -->
+<div class="test-card">
+    <div class="info">
+        <div class="header"><h3>📝 اختبار الملء التلقائي</h3></div>
+        <p class="status" id="autofillResult">لم يتم الفحص بعد</p>
+        <form id="autofillTestForm">
+            <input type="hidden" type="text" name="username" autocomplete="username" placeholder="اسم المستخدم">
+            <input type="hidden" type="password" name="password" autocomplete="current-password" placeholder="كلمة المرور">
+        </form>
+        <button class="button" onclick="testAutofill()">اضغط للفحص</button>
+        <hr>
+        <div class="note">
+            ⚠️ تجنب تفعيل الملء التلقائي على الأجهزة العامة<br>
+            ✅ استخدم مدير كلمات مرور موثوق بدلاً من المتصفح
+        </div>
+    </div>
+</div>
+
+<!-- 🔊 اختبار بصمة الصوت -->
+<div class="test-card">
+    <div class="info">
+        <div class="header"><h3>🔊 اختبار بصمة الصوت</h3></div>
+        <p class="status" id="audioFingerprintResult">لم يتم الفحص بعد</p>
+        <button class="button" onclick="testAudioFingerprint()">اضغط للفحص</button>
+        <hr>
+        <div class="note">
+            ⚠️ بعض المواقع تستخدم بصمة الصوت لتتبعك بدون إذن<br>
+            ✅ استخدم إضافات تمنع **AudioContext** إذا كنت تهتم بالخصوصية
+        </div>
+    </div>
+</div>
+
+<!-- 🖥️ اختبار اختراق التبويبات -->
+<div class="test-card" id="test">
+    <div class="info">
+        <div class="header"><h3>🖥️ اختبار اختراق التبويبات</h3></div>
+        <p class="status" id="tabnabbingResult">لم يتم الفحص بعد</p>
+        <button class="button" onclick="testReverseTabnabbing()">افتح التبويب</button>
+        <hr>
+        <div class="note">
+            ⚠️ لا تضغط على روابط مشبوهة تفتح في تبويب جديد<br>
+            ✅ استخدم إضافات تمنع **Reverse Tabnabbing**
+        </div>
+    </div>
+</div>
+
     </div>
 
     <script src="script.js"></script>

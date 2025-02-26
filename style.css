@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+body {
+    font-family: "Cairo", sans-serif;
+    background-color: #f4f7fc;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+.container1 {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mxw{
+  max-width: 800px;
+}
+.header {
+  position: absolute;
+  background-clip: border-box;
+  padding: 2px 16px;
+  margin-top: -3rem;
+  width: 304px;
+  border-radius: 0.75rem;
+  background-color: #4CAF50;
+box-shadow: 0 10px 15px -3px rgba(76, 175, 80, 0.4), 
+            0 4px 6px -4px rgba(76, 175, 80, 0.4);
+  text-align: center;
+}
+.intro{
+  text-align: right;
+  font-size: 1rem;
+  direction: rtl;
+}
+        .logo{
+          font-size: 2.8rem;
+          font-family: "Langar", serif;
+          border: 2px dashed  #333;
+          border-radius: 8px;
+          padding: 2px 2rem;
+        }
+h1 {
+    color: #333;
+}
+
+/* تصميم بطاقة الاختبار */
+.test-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #babecc, -5px -5px 10px #ffffff;
+    text-align: right;
+    width: 80%;
+}
+
+.test-card .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.test-card .info {
+    width: 100%;
+}
+
+.test-card .status {
+    font-weight: bold;
+    margin: 88px 0 12px;
+    border: 1px dashed #333;
+    border-radius: 8px;
+    padding: 1rem;
+    direction: rtl;
+}
+
+.note {
+    background: #fff3cd;
+    padding: 10px;
+    margin-top: 10px;
+    border-right: 5px solid #ffcc00;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 90%;
+    text-align: right;
+    direction: rtl;
+}
+
+/* .safe {
+    color: green;
+}
+.warning {
+    color: orange;
+}
+.danger {
+    color: red;
+}
+*/
+.button {
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+.button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+hr{
+  margin-top: 1rem;
+}
